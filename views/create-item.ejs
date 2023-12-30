@@ -9,7 +9,7 @@
 <body>
   <h1>Create a New Item</h1>
 
-  <form action="/items" method="post">
+  <form action="/items" method="post" enctype="multipart/form-data">
     <label for="item_name">Item Name:</label>
     <input type="text" id="item_name" name="item_name" required>
 
@@ -25,6 +25,9 @@
         <option value="<%= category._id %>"><%= category.category_name %></option>
       <% }); %>
     </select>
+
+    <label for="item_image">Item Image:</label>
+    <input type="file" id="item_image" name="display" accept="image/*">
 
     <button type="submit">Create Item</button>
   </form>

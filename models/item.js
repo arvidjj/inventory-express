@@ -7,6 +7,10 @@ const itemSchema = new Schema({
   item_name: { type: String, required: true },
   quantity: { type: Number, required: true },
   price: { type: Number, required: true },
+  image: { 
+    data: Buffer,
+    contentType: String
+  },
   category: { type: Schema.Types.ObjectId, ref: "Category", required: true }
 });
 
